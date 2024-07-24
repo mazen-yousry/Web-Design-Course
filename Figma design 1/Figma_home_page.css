@@ -1,0 +1,85 @@
+/* nav bar */
+
+    .navbar
+    {
+        margin: 2% 7%;
+    }
+
+    .navbar-nav{font-weight: 600;}
+
+    .nav-item{color: #111827!important;}
+
+    .navbar .btn
+    {
+        background-color:#F63A61;
+        border: none;
+        border-radius: 60px;
+    }
+
+
+/* hero area */
+
+    .hero-section
+    {
+        margin: 5% 27%;
+        font-weight: bolder;
+    }
+
+    .hero-section .lead
+    {
+        margin: 0 8%;
+        color: #111827!important;
+    }
+
+/* hero 2 */
+
+    .top-85
+    {
+        top: 85%!important;
+    }
+    
+    .start-25
+    {
+        left: 25%!important;
+    }
+
+    .mycard
+    {
+        top: 90%;
+        left: 23%;
+    }
+
+    .bi-hand-thumbs-up
+    {
+        background-color: #0000001A;
+        padding: 8% 15%;
+        font-size: 2rem;
+    }
+
+
+/* hero 3 */
+
+    .features
+    {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .right-side
+    {
+        margin: 3rem 6rem;
+    }
+
+    .acc-logo
+    {
+        margin-right: 2%;
+        width: 2.5rem; 
+        height: 2.5rem;
+    }
+
+    .acc-text
+    {
+        color: #0F0049;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
