@@ -1,0 +1,322 @@
+/* Normalization settings */
+
+    * 
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    body{
+        height: 250rem;
+    }
+
+/* Sizing settings */ 
+
+    .container
+    {
+        margin: 0 8%;
+        width: 90%;
+    }
+
+    .col-6{width: 60%;}
+    .col-3{width: 30%;}
+    .w-30{width: 30%;}
+    .w-45{width: 45%;}
+    .w-50{width: 50%;}
+    .w-100{width: 100%;}
+
+
+/* Display settings */
+
+    .inline-block{display: inline-block;}
+    .display-flex{display: flex;}
+    ::-webkit-scrollbar{display: none;}
+
+/* Color settings */
+
+    .text-white{color: rgb(255, 255, 255);}
+    .text-grey{color: rgb(185, 179, 179);}
+    .text-black{color: black;}
+
+
+/* Nav & Header settings */
+
+    header
+    {
+        width: 100%;
+        height: 40rem;
+        background-image: url(Assets/buildings.jpg);        
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    nav
+    {
+        height: 4rem;
+        display: flex;
+        padding: 1% 0;
+        position: absolute;
+    }
+
+    .header .main-menu ul, li
+    {
+        list-style-type: none;
+        margin: 0 1%;
+        padding: 1% 0;
+        font-weight: 700;
+    }
+
+    .home
+    {
+        font-weight: 800;
+    }
+
+    .line
+    {
+        border: white .1rem solid;
+        width: 85%;
+        margin-top: 4rem;
+        position: absolute;
+    }
+
+    a{text-decoration-line: none;}
+
+    .logo
+    {
+        font-weight: 800;
+        font-size: 1.6rem;
+        width: 25%;
+        margin-left: 1%;
+    }
+
+    .main-menu
+    {
+        width: 63%;
+        text-align: right;
+    }
+
+    .search-logo
+    {
+        width: 5%;
+        margin-left: 2.5%;
+    }
+
+    .overlay
+    {
+        background-color: black;
+        width: 100%;
+        height: 40rem;
+        opacity: .5;
+    }
+    
+    .paragraphs
+    {
+        margin: 0 0 0 10%;
+    }
+
+    .paragraphs p
+    {
+        font-size: 1.3rem;
+        margin: 27% 2% 0 0;
+    }
+
+    .paragraphs i
+    {
+        margin: 27% 2% 0 0;
+        border-radius: 50%;
+        color: black;
+        padding: .6rem 1rem;
+        background-color: gray;
+    }
+
+
+/* News section 1 & 2 */
+    /* left part */
+        .mini-nav
+        {
+            margin: 6% 0 0 3%;
+            width: 50%;
+        }
+
+        .mini-nav li
+        {
+            margin: 0 1.6rem;
+        }
+
+        .mini-logo
+        {
+            font-weight: 800;
+            font-size: 1.2rem;
+            width: 10rem;
+            margin: .5% 0 0 .5%;
+        }
+        
+        .mini-line
+        {
+            border: rgb(119, 118, 118) 1px solid;
+            margin: 10% 0 0 3%;
+            opacity: .2;
+            width: 48%;
+            height: 0;
+            position: absolute;
+        }
+
+        .blue-line
+        {
+            border: rgb(18, 74, 229) 1px solid;
+            width: 2rem;
+            position: absolute;
+            top: 88%;
+            left: 19.5%;
+        }
+
+        .card
+        {
+            width: 24rem;
+            height: 26.5rem;
+            box-shadow: 1px 1px 3px 2px gray;
+            text-align: center;
+            flex-wrap: wrap;
+            margin: 15rem 15rem 15rem 4rem;
+            text-align: left;
+        }
+
+
+        .card .badge
+        {
+            color: blue;
+            background-color: white;
+            padding: .4rem .8rem;
+            font-size: .85rem;
+            position: absolute;
+            margin: .8rem;
+        }
+
+        .right
+        {
+            margin: 14.2rem 0 0 .5rem ;
+        }
+
+        .small-card
+        {
+            width: 30rem;
+            height: 6rem;
+            box-shadow: 1px 1px 3px 2px gray;
+            text-align: center;
+            flex-wrap: nowrap;
+            margin: .8rem 0;
+            text-align: left;
+        }
+
+        .arrows
+        {
+            margin: 2rem 1rem;
+        }
+
+        .arrows i
+        {
+            border: .1rem gray solid;
+            border-radius: 50%;
+            color: gray;
+            padding: .6rem .8rem;
+            margin: 0 .4rem;
+            font-weight: 600;
+        }
+
+        /* last articles */
+            .bg-card
+            {
+                height: 16rem;
+                width: 29rem;
+                flex-wrap: wrap;
+                background-size: contain;
+            }
+
+            .bg-card-overlay
+            {
+                background-color: rgb(0, 0, 0);
+                opacity: .6;
+            }
+
+            .bg-card .badge
+            {
+                color: blue;
+                background-color: white;
+                padding: .35rem .7rem;
+                font-size: .85rem;
+                position: absolute;
+                margin: 1.2rem  42%;
+            }
+
+            .nonsmall-card
+            {
+                width: 55rem;
+                height: 12rem;
+                box-shadow: 1px 1px 3px 2px gray;
+                text-align: center;
+                flex-wrap: nowrap;
+                margin: .8rem 0;
+                text-align: left;
+            }
+    
+    /* right part */
+        .v-line
+        {
+            width: .1rem;
+            height: 85rem;
+            margin: 9rem 0 0 0;
+            border: grey .1rem solid;
+            opacity: .2;
+        }
+
+        .social i
+        {
+            padding: 0 2rem 0 0;
+            color: gray;
+        }
+
+
+/* footer */
+
+        footer div a
+        {
+            width: 10rem;
+            padding: 0 2.4rem;
+            text-decoration: none;
+            color: gray;
+            text-align: justify;
+        }
+
+        .input-container 
+        {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #aaa; /* Bottom border */
+            width: 25rem;
+        }
+
+        .input-container input
+        {
+            border: none;
+            outline: none;
+            background: none;
+            color: #fff; /* White text color */
+            margin-right: 10rem;
+            padding: 1rem 0; /*Padding for spacing */
+            font-size: 1rem;
+        }
+
+        .input-container button 
+        {
+            background: none;
+            border: none;
+            color: #aaa; /* Gray arrow color */
+            cursor: pointer;
+            padding: 0;
+            margin-left: 10px; /* Spacing between input and button */
+            font-size: 1rem;
+        }
