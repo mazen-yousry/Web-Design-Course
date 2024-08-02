@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    <script>
+        const game = 
+        {
+            team1: 'Bayern Munich',
+            team2: 'Borrussia Dortmund',
+            players: 
+            [
+                [
+                    'Neuer',
+                    'Pavard',
+                    'Martinez',
+                    'Alaba',
+                    'Davies',
+                    'Kimmich',
+                    'Goretzka',
+                    'Coman',
+                    'Muller',
+                    'Gnarby',
+                    'Lewandowski'
+                ],
+
+                [
+                    'Burki',
+                    'Schulz',
+                    'Hummels',
+                    'Akanji',
+                    'Hakimi',
+                    'Weigl',
+                    'Witsel',
+                    'Hazard',
+                    'Brandt',
+                    'Sancho',
+                    'Gotze'
+                ],
+            ],
+            score: '4:0',
+            scored: ['Lewandowski', 'Gnarby', 'Lewandowski','Hummels'],
+            date: 'Nov 9th, 2037',
+            odds: 
+            {
+                team1: 1.33,
+                x: 3.25,
+                team2: 6.5,
+            }
+        }
+
+        // 1. Create one player array for each team
+        const players1 = game.players[0]
+        const players2 = game.players[1]
+
+        // 2. Create variables for the Bayern Munich goalkeeper and field players
+        const gk = players1[0]
+        const fieldPlayers = players1.slice(1)
+
+        // 3. Create an array containing all players
+        // const allPlayers = [...players1, ...players2]   // spread operator way
+        
+        const allPlayers = []                              // for loop way
+        for(let i=0; i<(players1.length); i++)
+            allPlayers.push(players1[i])
+
+        for(let i=0; i<(players2.length); i++)
+            allPlayers.push(players2[i])
+
+        // 4. Create a new array containing original team1 players plus substitute players
+        const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic']    // spread operator way
+
+        // 5. create one variable for each odd
+        const team1 = game.odds.team1
+        const team2 = game.odds.team2
+        const draw = game.odds.x
+
+        // 6. Write a function that prints player names and total goals scored (not an array)
+        function printGoals(...players) 
+        {
+                console.log(...players)
+        }
+        printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich')
+        printGoals(...game.scored)
+
+
+        // 7. Print which team is more likely to win (lower odd is the winner)
+        console.log(game.odds.team1>game.odds.team2 && game.team2 || game.odds.team2>game.odds.team1 && game.team1 || "Draw")
+    
+        // 8. Loop over the scored array and print each player name with goal number
+        for(let i=0; i<game.scored.length; i++)
+        { 
+            console.log(`Goal${i+1}: ${game.scored[0]}`) 
+        }
+
+        // 9. Calculate the average odd and log it to the console
+        let odds = Object.values(game.odds)
+        let sum = 0
+        for(let i=0; i<odds.length; i++)
+        {
+            sum += odds[i] 
+        }
+        let avg = sum / odds.length
+        console.log(avg)
+
+        // 10. Print the 3 odds to the console
+        console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`)
+        console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`)
+        console.log(`Odd of draw: ${game.odds.draw}`)
+
+        // Bonus: Create an object containing the names of the players who scored as keys and the number of goals as the value
+        const scorers = {}
+        for(let i=0; i<game.scored.length; i++)
+        {
+            scorers[game.scored[i]] = (scorers[game.scored[i]] || 0) + 1
+        }
+        console.log(scorers)
+    </script>
+</body>
+</html>
