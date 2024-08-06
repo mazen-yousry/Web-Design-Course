@@ -1,0 +1,913 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/* Normalization settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colors */
+.main-bg-color { background-color: #0c65ed!important; }
+.main-color { color: #0c65ed; }
+
+
+/* Header & Navbar */
+.menu-header {
+    position: fixed!important; /* Fixes the navbar to the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Ensures the navbar stays on top of other elements */
+    background-color: #fff; /* Optional: Set background color to avoid transparency issues */
+}
+
+/* Ensure there's enough padding at the top of the content so it's not covered by the fixed navbar */
+body {
+    padding-top: 60px; /* Adjust this value based on the height of your navbar */
+}
+
+
+.top-header {
+    width: 100%;
+    padding-top: .6rem;
+}
+
+.social i, .address, .email {
+    padding: 0 .6rem;
+}
+
+.top-header .content .line {
+    height: 1.5rem;
+    border: .1rem white solid;
+    opacity: .5;
+}
+
+/* Change the background color */
+.navbar-toggler {
+    background-color: #000000 !important;
+}
+
+/* Change the icon color */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    /* The above SVG code changes the icon color to white (#ffffff) */
+}
+
+.navbar ul, li {
+    font-weight: 600;
+    font-size: .9rem;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+.navbar li a:hover {
+    color: #0c65ed;
+}
+
+.nav-item li{border: none!important;}
+
+.nav-item > .dropdown-menu
+{
+    width: 5rem;
+    border-top: #0c65ed .2rem solid;
+    border-radius: 0%;
+    z-index: 1060;
+}
+
+/* Dropdown menu default state */
+.dropdown-menu {
+    display: none!important;
+}
+
+/* Dropdown menu hover effect */
+.nav-item:hover .dropdown-menu {
+    display: block!important;
+    transition-delay: 1s!important;
+
+}
+
+.dropdow-item:hover .dropdown-menu {
+    display: block!important;    
+}
+
+/* Additional media query styling */
+@media (max-width: 990px) {
+    .dropdown-item::before {
+        transform: rotate(-90deg);
+    }
+
+    .top-header{display: none;}
+}
+
+
+/* slider */
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+swiper-container {
+    width: 100%;
+    height: 90%;
+}
+
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: -webkit-grab;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-color: rgb(0, 0, 0);
+    opacity: .7;
+    z-index: 0;
+}
+
+swiper-slide img {
+    z-index: -1;
+}
+
+
+/* about us */
+.border-line {
+    border-top: 2px solid #0c65ed; /* Adjust the color as needed */
+    opacity: 1;
+    margin: 4px -0.5rem;
+}
+
+.short-line {
+    width: 3rem;
+}
+
+.long-line {
+    width: 5rem;
+}
+
+.section-subtitle {
+    color: #888;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.detail-box li
+{
+    list-style-type: none;
+    padding: .7rem 0;
+}
+
+.detail-box i
+{
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+}
+
+.detail-box
+{
+    position: absolute;
+    max-width: 23rem;
+    padding: 5px 20px;
+    background-color: white;
+    height: 28rem;
+    text-align: left;
+}
+
+.detail-box li:hover
+{
+    
+    h5, i   
+    {
+        color: #0c65ed;
+        transition: color .6s ease;
+    }
+}
+
+.counter-wrap .c-icon
+{
+    background-color: rgb(195, 205, 205);
+    font-size: 2.2rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    color: #0c65ed;
+}
+
+
+/* our services */
+.our-services {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 8rem;
+}
+
+.our-services img {
+    width: 100%;
+    height: auto;
+}
+
+.our-services .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: .9;
+    z-index: 1;
+}
+
+.our-services .container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-col {
+    min-width: 20%;
+    margin: 1rem;
+}
+
+.service-wrap {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.main-card {
+    padding: 5rem 8rem;
+}
+
+.main-card i{font-size: 2.8rem;}
+
+.overlay-content {
+    display: none; /* Hide overlay by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Background for overlay */
+    color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 2; /* Ensure overlay is above main content */
+    flex-direction: column; /* Stack items vertically */
+    box-sizing: border-box;
+}
+
+.service-wrap:hover .overlay-content {
+    display: flex; 
+}
+
+.service-wrap:hover .main-card {
+    opacity: 0; 
+}
+
+.service-wrap:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    margin-top: 1rem;
+}
+
+
+
+/* our work */
+.filter-head {
+    margin: 6rem 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-head li {
+    list-style: none;
+    padding: 0 1.5rem;
+    cursor: pointer;
+}
+
+.filter-head .active {
+    color: #0c65ed;
+    font-weight: bold;
+}
+
+.filter-head li:hover {
+    color: #0c65ed;
+}
+
+.port-item {
+    margin: 1rem 0;
+}
+
+.port-item .project {
+    position: relative;
+    overflow: hidden;
+}
+
+.port-item img {
+    width: 90%;
+    height: auto;
+    border-radius: 2%;
+}
+
+.port-item:hover img {
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.proj-content {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 4rem);
+    opacity: 0;
+    background-color: rgba(12, 101, 237, 0.9);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 1rem;
+    transition: opacity 0.3s ease;
+    border-radius: 2%;
+}
+
+.port-item:hover .proj-content {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .filter-head {
+        margin: 2rem 5%;
+        width: auto;
+    }
+
+    .filter-head li {
+        padding: 0 0.5rem;
+    }
+
+    .proj-content {
+        width: calc(100% - 1rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .port-item {
+        margin: 1rem 0;
+    }
+
+    .proj-content {
+        top: 60%;
+    }
+}
+
+/* img */
+.img-section
+{
+    margin-top: 25%;
+}
+
+.img-section img{width: 100%!important;}
+
+
+/* team sec */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.team-card {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.team-info:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.team-card-inner {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.team-image {
+    display: block;
+    height: 80%!important;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.team-info {
+    position: absolute;
+    bottom: 26%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    transform: translateY(100%);
+    text-align: center;
+}
+
+.team-card:hover .team-info {
+    transition: .3s bottom ease;
+    bottom: 52%;
+        transition: property duration timing-function delay;
+
+}
+
+.team-card:hover .divider {
+    display: none;
+}
+
+.team-info h5, .team-info h6, .team-info p {
+    margin: 5px 0;
+}
+
+.team-info h6{color: #0c65ed;}
+
+.social-icons {
+    margin-top: 10px;
+    background-color: #0c65ed;
+    width: 100%;
+    border: 0% 5%;
+}
+
+.social-icons i {
+    padding: 0 1rem;
+    color: #ffffff; /* Adjust color as needed */
+}
+
+.social-icons i:hover {
+    color: #0056b3; /* Adjust hover color */
+}
+
+.subscribe-box {
+    height: 15rem;
+    background-color: black;
+}
+
+.slider-container {
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease;
+    margin: auto;
+    height: 25rem;
+
+
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0.6rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    height: 55%;
+}
+
+.slide img {
+    margin-top: 1%;
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.slide h3 {
+    margin: 10px 15px;
+}
+
+.slide p {
+    color: #666;
+}
+
+.slide a {
+    color: #0c65ed;
+    text-decoration: none;
+}
+
+.controls {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    display: flex;
+    transform: translateY(-50%);
+}
+
+#nextBtn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 1px 15px;
+    cursor: pointer;
+    border-radius: 0 50% 50% 0;
+}
+
+#prevBtn {
+    background-color: #0c65ed;
+    border: none;
+    color: white;
+    padding: 1px 15px;
+    cursor: pointer;
+    border-radius: 50% 0 0 50%;
+    margin-right: 10%;
+}
+
+footer {
+    height: 40rem;
+}
+
+.pricing-section {
+    text-align: center;
+    background-color: #fff;
+    width: 90%;
+    margin: auto;
+}
+
+.pricing-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.pricing-section .description {
+    color: #777;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    padding: 5px;
+    width: fit-content;
+    margin: 0 auto 30px auto;
+}
+
+.toggle-buttons .toggle-btn1 {
+
+    border: none;
+    color: #0c65ed;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 25px 0 0 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-buttons .toggle-btn2 {
+
+    border: none;
+    color: #0c65ed;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 0 25px 25px 0;
+    transition: background-color 0.3s, 0.3s;
+}
+
+.toggle-buttons .toggle-btn1.active {
+    background-color: #0c65ed;
+    color: #fff;
+}
+
+.toggle-buttons .toggle-btn2.active {
+    background-color: #0c65ed;
+    color: #fff;
+}
+
+.pricing-tables {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing-table {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.pricing-table.active {
+    -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.25);
+    border: 0;
+}
+
+.pricing-table h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.pricing-table .price {
+    font-size: 1.25em;
+    margin-bottom: 20px;
+    color: #0c65ed;
+}
+
+.pricing-table ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-table ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.cta-button {
+    background-color: #0c65ed;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.cta-button.active {
+    background-color: white;
+    color: #0c65ed;
+    border: #0c65ed 1px solid;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.move-arrow:hover {
+    padding-left: 7px;
+}
+
+.play1:hover>.move-arrow {
+    padding-left: 7px;
+}
+
+.head-top a {
+    font-size: 1rem;
+}
+
+.main-bck {
+    background-color: #0c65ed !important;
+}
+
+.row.bg-main-color {
+    height: 10rem;
+}
+
+.bot-img {
+    filter: drop-shadow(-11px 0 7px rgba(140, 140, 140, 0.4));
+}
+
+.clients {
+    border: 1px solid #959595;
+    border-radius: 5px;
+    margin-top: 20px
+}
+
+footer {
+    background-color: #1a1a1a;
+}
+
+.mini-card {
+    height: 6rem;
+}
+
+.mini-card img {
+    height: 5rem;
+    width: 25%;
+}
+
+.mini-card img:hover {
+    filter: brightness(0.8);
+}
+
+.foot-btn:hover {
+    color: white !important;
+    background-color: #0c65ed!important;
+}
+
+.foot-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    padding: 26px 0;
+    -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.5);
+}
+
+.go-up-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0c65ed;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.go-up-btn:hover {
+    background-color: #0056b3;
+}
+
+.go-up-btn:active {
+    background-color: #003d80;
+}
+
+.go-up-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+footer a:hover {
+    filter: brightness(0.8);
+}
+
+.contact-bg {
+    background-image: url(../images/abt-ban.jpg);
+    background-size: cover;
+    height: 27rem;
+}
+
+.banner-heading h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.banner::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+}
+
+.banner-heading {
+    padding: 140px 0 115px;
+}
+
+.head-down {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.send-message-btn {
+    padding: 1% 2%;
+    border: none;
+    background: #0c65ed;
+    color: white;
+    font-size: 18px;
+}
+
+.send-message-btn:hover {
+    background-color: #000;
+}
+
+.member {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.member-info {
+    position: absolute;
+    top: 75%;
+    padding: 22px 30px 8px;
+    border-radius: 0 0 5px 5px;
+    -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    background-color: white;
+}
+
+.member:hover>.member-info {
+    top: 46%;
+    transition: all 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.member:hover>.member-info .spacial {
+    border-bottom: none;
+}
+
+.member::after>.member-info {
+    top: 70%;
+    transition: all 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.spacial {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    border-bottom: #000 solid 2px;
+}
+
+
+.card a:hover {
+    color: #0c65ed!important;
+}
+
+.card-img {
+    overflow: hidden;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.1) rotate(-2deg);
+    transition: 1.5s all;
+}
+
+.adapt a :hover {
+    color: rgb(178, 177, 177) !important;
+}
+
+.card:hover .adapt {
+    background-color: #0c65ed !important;
+}
+
+.sec {
+    background: #f9f9f9;
+    margin-top: 5rem;
+}
+
+.shine:hover {
+    color: #0c65ed
+}
